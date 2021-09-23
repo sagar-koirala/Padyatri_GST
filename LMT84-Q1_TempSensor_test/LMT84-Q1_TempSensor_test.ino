@@ -15,4 +15,5 @@ void loop() {
   Serial.print("Analog: "); Serial.println(tempRead);
   Serial.print("mVolts: "); Serial.print(tempmV,4); Serial.println("mV");
   Serial.print("Temp: "); Serial.print(tempC, 4); Serial.println("*C");
+  delay(1000);
 }
