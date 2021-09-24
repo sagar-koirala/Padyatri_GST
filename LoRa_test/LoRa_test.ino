@@ -24,7 +24,7 @@ void receivepckt(int pcktsize){
 }
 
 void setup() {
-  // LoRa.setPins(7, 8, 3);   //uncomment for receiver board
+   LoRa.setPins(7, 8, 3);   //uncomment for receiver board
   Serial.begin(9600);
   while (!Serial);  
 
@@ -37,7 +37,7 @@ void setup() {
 }
 
 void loop() {
-  if (millis() - lasttime > interval){
+  if (millis() - lasttime > 100){
     Serial.print("Sending  message: Packet no: ");
     Serial.println(counter);
     LoRa.beginPacket();
